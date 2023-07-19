@@ -10,11 +10,13 @@ Pokemon gerarPokemonRandom() {
 
   int ataqueRandom = Random().nextInt(30);
   int defesaRandom = Random().nextInt(30);
+  int vida = 200;
 
   pokemon = Pokemon(
     nome: pokemons[Random().nextInt(pokemons.length)].nome, 
     ataque: ataqueRandom, 
-    defesa: defesaRandom
+    defesa: defesaRandom,
+    vida: vida
   );
   return pokemon;
 }
