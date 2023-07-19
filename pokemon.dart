@@ -1,11 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class Pokemon {
-  String pokemon;
+  String nome;
   int? ataque;
   int? defesa;
   int? vida;
   Pokemon({
-    required this.pokemon,
+    required this.nome,
     this.ataque,
     this.defesa,
     this.vida,
@@ -14,6 +14,7 @@ class Pokemon {
 
   @override
   String toString() {
-    return pokemon;
+    return "Pokemon: $nome, Ataque: $ataque, Defesa: $defesa, Vida: $vida";
   }
 }
+

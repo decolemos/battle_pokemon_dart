@@ -1,20 +1,21 @@
 import 'dart:io';
 
-void entrarNaBatalha() {
-  bool entrarNaBatalha = false;
+bool respostaValida() {
 
-  while(!entrarNaBatalha){
+  bool respostaValida = false;
+
+  while(!respostaValida){
     stdout.write("Digite sim ou não para continuar: ");
-    String resposta = stdin.readLineSync() ?? "";
+    String resposta = stdin.readLineSync()!.toLowerCase();
 
     if(resposta == "sim"){
       print("Capture um pokemon para batalhar");
-      entrarNaBatalha = true;
+      return true;
     } else if (resposta == "nao"){
       print("Fraco, saindo do game");
-      return;
+      return false;
     } else {
       print("Desculpa não entendi");
     }
-  }
+  } // return entrarNaBatalha;
 }

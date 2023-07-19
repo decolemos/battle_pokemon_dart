@@ -1,24 +1,13 @@
-import 'dart:math';
-
 import 'pokemon.dart';
 
 List<Pokemon> pokemons = [];
 
 void buscaNomePokemon() {
 
-  int min = 50;
-  int max = 150;
-
-  int ataqueRandom = Random().nextInt(300);
-  int defesaRandom = Random().nextInt(300);
-  int vidaRandom = Random().nextInt(max - min);
-
-
   for(int index = 0; jsonResponse.length > index; index++) {
     final nome = jsonResponse[index]["name"];
-    pokemons.add(Pokemon(pokemon: nome!, ataque: ataqueRandom, defesa: defesaRandom, vida: vidaRandom));
+    pokemons.add(Pokemon(nome: nome!, ataque: 0, defesa: 0, vida: 0));
   }
-  // print(pokemons);
 }
 
 final jsonResponse = [
